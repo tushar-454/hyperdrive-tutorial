@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
 import { users } from "../../../drizzle/schema";
-import { db } from "../../lib/db";
+import { getDB } from "../../lib/db";
 
 type FieldErrors = {
     fullName?: string;
@@ -66,6 +66,7 @@ export const createUser = async (formData: FormData): Promise<ActionResult> => {
     }
 
     try {
+        const db = await getDB();
         await db.insert(users).values(parsed.data);
         revalidatePath("/");
         return { ok: true };
@@ -82,6 +83,7 @@ export const deleteUser = async (userId: number): Promise<ActionResult> => {
     }
 
     try {
+        const db = await getDB();
         await db.delete(users).where(eq(users.id, parsed.data.userId));
         revalidatePath("/");
         return { ok: true };
