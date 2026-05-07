@@ -1,5 +1,6 @@
-import Link from "next/link";
+export const dynamic = "force-dynamic";
 
+import Link from "next/link";
 import { getDB } from "../..";
 import { users } from "../../drizzle/schema";
 import UsersTable from "./users-table";
@@ -7,6 +8,8 @@ import UsersTable from "./users-table";
 export default async function Home() {
     const db = await getDB();
     const allUsers = await db.select().from(users);
+
+    console.log(allUsers);
 
     return (
         <main className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-6 py-10">

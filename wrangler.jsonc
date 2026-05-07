@@ -11,12 +11,11 @@
     "name": "hyperdrive-tutorial",
     "main": ".open-next/worker.js",
     "compatibility_date": "2026-05-07",
-    "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+    "compatibility_flags": ["nodejs_compat"],
     "hyperdrive": [
         {
             "binding": "HYPERDRIVE",
-            "id": "31d19390496f45c0baecaf758c1aba54",
-            "localConnectionString": "postgresql://postgres.bcpzjzvdqjkygdekhqao:vtK1e3FgOGNL1yjs@aws-1-ap-northeast-2.pooler.supabase.com:6543/postgres",
+            "id": "68f65ed893cd424eb062523daed327f5",
         },
     ],
     "assets": {
