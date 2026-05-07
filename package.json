@@ -14,16 +14,22 @@
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.19.6",
+    "drizzle-orm": "^0.45.2",
     "next": "16.2.5",
+    "pg": "^8.20.0",
+    "postgres": "^3.4.9",
     "react": "^19.1.7",
-    "react-dom": "^19.1.7"
+    "react-dom": "^19.1.7",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20.19.39",
+    "@types/pg": "^8.20.0",
     "@types/react": "^19.1.7",
     "@types/react-dom": "^19.1.7",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.5",
     "tailwindcss": "^4",
